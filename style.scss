@@ -1,0 +1,34 @@
+/*
+Theme Name: Uncle Joes Theme Fix
+Theme URI: 
+Author: the Christopher Hill
+Author URI: 
+Description: 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Reset*/
+@import "scss/reset";
+
+/* Global*/
+@import "scss/global";
+
+/* Large Devices, Wide Screens */
+@import "scss/wide_screen";
+
+/* Medium Devices, Desktops */
+@import "scss/desktop";
+
+/* Small Devices, Tablets */
+@import "scss/tablet";
+
+/* Extra Small Devices, Phones */
+@import "scss/small_devices";
+
+/* Custom, iPhone Retina */
+@import "scss/iphone_retina";

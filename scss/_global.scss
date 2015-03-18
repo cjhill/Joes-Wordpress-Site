@@ -1,0 +1,427 @@
+/*==========================================================================
+Variables
+========================================================================== */
+
+/*Colors*/
+$almostBlack: #222;
+$darkGray: #424242;
+$gray: #757575;
+$lightGray: #e2e2e2;
+$red: #ed1c24;
+$lightRed: #f6c4c1;
+$white: #fff;
+
+/*Line Heights*/
+$lineOne: 30px;
+
+/*Section Padding*/
+$sectionPaddingOne: 50px 0;
+
+/* ==========================================================================
+Mixins and Extends
+========================================================================== */
+
+.align-center {
+    -webkit-align-items: center;
+        -ms-align-items: center;
+            align-items: center;
+    -ms-flex-align: center;
+}
+
+.justify-content {
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+       -moz-justify-content: center;
+        -ms-justify-content: center;
+         -o-justify-content: center;
+            justify-content: center;
+}
+
+.flex-end {
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+       -moz-justify-content: flex-end;
+        -ms-justify-content: flex-end;
+         -o-justify-content: flex-end;
+            justify-content: flex-end;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+
+         -o-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    /* border: 1px solid red !important;*/
+}
+
+html,
+body {
+    height: 100%;
+
+    font-family: "proxima-nova",sans-serif;
+}
+
+/* ==========================================================================
+HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
+========================================================================== */
+
+#about .section_title,
+#videos .section_title {
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 46px;
+
+    text-transform: uppercase;
+}
+
+#about .section_paragraph,
+#blog .blog_excerpt,
+#videos .section_paragraph {
+    font-size: 1em;
+    line-height: 26px;
+}
+
+/* ==========================================================================
+BUTTONS WITH THE SAME SETTINGS
+========================================================================== */
+
+#blog a.blog_entry_read_more,
+#videos a.more_videos_btn {
+    display: inline-block;
+    padding: 15px 18px;
+
+    font-size: .9em;
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+CONTAINER
+========================================================================== */
+
+.container {
+    width: 90%;
+
+    word-wrap: break-word;
+}
+
+/* ==========================================================================
+NAV
+========================================================================== */
+
+#nav {
+    position: fixed;
+    z-index: 2;
+
+    width: 100%;
+    height: 65px;
+
+    background: transparent;
+    .container {
+        height: inherit;
+        .row {
+            height: inherit;
+            .all {
+                display: flex;
+                height: inherit;
+
+                -webkit-align-items: center;
+                    -ms-align-items: center;
+                        align-items: center;
+                -ms-flex-align: center;
+            }
+            .one {
+                .group {
+                    height: inherit;
+                    padding: 20px;
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+            }
+            .two {
+                display: flex;
+
+                -ms-flex-pack: end;
+                -webkit-justify-content: flex-end;
+                   -moz-justify-content: flex-end;
+                    -ms-justify-content: flex-end;
+                     -o-justify-content: flex-end;
+                        justify-content: flex-end;
+                ul {
+                    li {
+                        display: inline-block;
+                        padding-left: 20px;
+                        a {
+                            font-size: .9em;
+                            font-weight: 900;
+
+                            text-transform: uppercase;
+
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.addColor {
+    background: $almostBlack !important;
+}
+
+/* NAV Menu Toggle Button
+========================================================================== */
+
+.menu_btn {
+    display: block;
+
+    color: $red;
+    .fa {
+        font-size: 2em;
+    }
+}
+
+/* NAV Menu Slide Out Nav
+========================================================================== */
+
+#slide_out_nav {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    z-index: 1;
+
+    width: 30%;
+    height: 100%;
+    padding-left: 150px;
+
+    background: $lightGray;
+    ul {
+        position: absolute;
+        top: 30%;
+        li {
+            height: 80px;
+            a {
+                font-size: 2em;
+                font-weight: 200;
+
+                color: #000;
+            }
+        }
+    }
+}
+
+.hide_nav {
+    display: none;
+}
+
+/* ==========================================================================
+JUMBOTRON
+========================================================================== */
+
+.jumbotron {
+    height: 50%;
+    margin: 0;
+
+    background: linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .3)), url(img/banner/banner.jpg);
+    background-size: cover;
+    .container {
+        display: flex;
+        height: 100%;
+
+        -webkit-align-items: center;
+            -ms-align-items: center;
+                align-items: center;
+        -ms-flex-align: center;
+        .group {
+            width: 100%;
+
+            text-align: center;
+        }
+    }
+}
+
+/* JUMBOTRON Font Size
+   ========================================================================== */
+
+#jumbotron  h1 {
+    font-size: 4em;
+
+    letter-spacing: 10px;
+}
+
+#jumbotron h1,
+#jumbotron h2 {
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    color: $white;
+}
+
+/* ==========================================================================
+ABOUT
+========================================================================== */
+
+#about {
+    height: auto;
+    padding: 200px 0;
+
+    background: $white;
+    background-size: cover;
+    .container {
+        height: 100%;
+        .row {
+            display: flex;
+            height: 100%;
+
+            -ms-align-items: center;
+                align-items: center;
+        }
+    }
+}
+
+/* ABOUT Fonts
+   ========================================================================== */
+
+#about .section_title {
+    color: $almostBlack;
+}
+
+#about .section_paragraph {
+    font-weight: 500;
+
+    color: $gray;
+}
+
+/* ABOUT Images
+   ========================================================================== */
+
+#about .two img {
+    width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+BLOG
+========================================================================== */
+
+#blog {
+    height: auto;
+
+    background: $red;
+    .row {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        .all {
+            display: flex;
+            height: inherit;
+            padding: 300px 100px;
+
+            -webkit-align-items: center;
+                -ms-align-items: center;
+                    align-items: center;
+            -ms-flex-align: center;
+            .group {
+                width: 60%;
+            }
+        }
+        .number2 {
+            background: lighten($red, 2%);
+        }
+    }
+}
+
+/* BLOG Fonts
+   ========================================================================== */
+
+#blog .blog_entry_title {
+    font-size: 1.8em;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    color: $white;
+}
+
+#blog .blog_excerpt {
+    display: block;
+
+    font-weight: 600;
+
+    color: $white;
+}
+
+#blog .blog_entry_title,
+#blog .blog_excerpt {
+    color: $white;
+}
+
+/* BLOG Buttons
+   ========================================================================== */
+
+#blog a.blog_entry_read_more {
+    transition: all 300ms ease;
+
+    color: $white;
+    border: 3px solid $white;
+    background: transparent;
+    &:hover {
+        color: $red;
+        border: 5px solid $white;
+        background: $white;
+    }
+}
+
+/* ==========================================================================
+VIDEOS
+========================================================================== */
+
+#videos {
+    height: auto;
+    padding: 300px 0;
+
+    background: $white;
+    .container {
+        height: 100%;
+        .row {
+            display: flex;
+            height: 100%;
+
+            -ms-align-items: center;
+                align-items: center;
+            .all {
+                height: auto;
+                .section_paragraph {
+                    color: $gray;
+                }
+                .youtube_video {
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+/* VIDEOS Buttons
+   ========================================================================== */
+
+a.more_videos_btn {
+    color: $almostBlack;
+    border: 3px solid $almostBlack;
+}

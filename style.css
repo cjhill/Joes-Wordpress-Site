@@ -1,0 +1,419 @@
+/*
+Theme Name: Uncle Joes Theme Fix
+Theme URI: 
+Author: the Christopher Hill
+Author URI: 
+Description: 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* Reset*/
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Global*/
+/*==========================================================================
+Variables
+========================================================================== */
+/*Colors*/
+/*Line Heights*/
+/*Section Padding*/
+/* ==========================================================================
+Mixins and Extends
+========================================================================== */
+.align-center {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -ms-flex-align: center; }
+
+.justify-content {
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center; }
+
+.flex-end {
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+* {
+  /* border: 1px solid red !important;*/ }
+
+html,
+body {
+  height: 100%;
+  font-family: "proxima-nova",sans-serif; }
+
+/* ==========================================================================
+HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
+========================================================================== */
+#about .section_title,
+#videos .section_title {
+  font-size: 3em;
+  font-weight: 800;
+  line-height: 46px;
+  text-transform: uppercase; }
+
+#about .section_paragraph,
+#blog .blog_excerpt,
+#videos .section_paragraph {
+  font-size: 1em;
+  line-height: 26px; }
+
+/* ==========================================================================
+BUTTONS WITH THE SAME SETTINGS
+========================================================================== */
+#blog a.blog_entry_read_more,
+#videos a.more_videos_btn {
+  display: inline-block;
+  padding: 15px 18px;
+  font-size: .9em;
+  font-weight: 800;
+  text-transform: uppercase; }
+
+/* ==========================================================================
+CONTAINER
+========================================================================== */
+.container {
+  width: 90%;
+  word-wrap: break-word; }
+
+/* ==========================================================================
+NAV
+========================================================================== */
+#nav {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 65px;
+  background: transparent; }
+  #nav .container {
+    height: inherit; }
+    #nav .container .row {
+      height: inherit; }
+      #nav .container .row .all {
+        display: flex;
+        height: inherit;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        -ms-flex-align: center; }
+      #nav .container .row .one .group {
+        height: inherit;
+        padding: 20px; }
+        #nav .container .row .one .group img {
+          width: auto;
+          height: 100%; }
+      #nav .container .row .two {
+        display: flex;
+        -ms-flex-pack: end;
+        -webkit-justify-content: flex-end;
+        -moz-justify-content: flex-end;
+        -ms-justify-content: flex-end;
+        -o-justify-content: flex-end;
+        justify-content: flex-end; }
+        #nav .container .row .two ul li {
+          display: inline-block;
+          padding-left: 20px; }
+          #nav .container .row .two ul li a {
+            font-size: .9em;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #fff; }
+
+.addColor {
+  background: #222 !important; }
+
+/* NAV Menu Toggle Button
+========================================================================== */
+.menu_btn {
+  display: block;
+  color: #ed1c24; }
+  .menu_btn .fa {
+    font-size: 2em; }
+
+/* NAV Menu Slide Out Nav
+========================================================================== */
+#slide_out_nav {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  z-index: 1;
+  width: 30%;
+  height: 100%;
+  padding-left: 150px;
+  background: #e2e2e2; }
+  #slide_out_nav ul {
+    position: absolute;
+    top: 30%; }
+    #slide_out_nav ul li {
+      height: 80px; }
+      #slide_out_nav ul li a {
+        font-size: 2em;
+        font-weight: 200;
+        color: #000; }
+
+.hide_nav {
+  display: none; }
+
+/* ==========================================================================
+JUMBOTRON
+========================================================================== */
+.jumbotron {
+  height: 50%;
+  margin: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/banner/banner.jpg);
+  background-size: cover; }
+  .jumbotron .container {
+    display: flex;
+    height: 100%;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
+    .jumbotron .container .group {
+      width: 100%;
+      text-align: center; }
+
+/* JUMBOTRON Font Size
+   ========================================================================== */
+#jumbotron h1 {
+  font-size: 4em;
+  letter-spacing: 10px; }
+
+#jumbotron h1,
+#jumbotron h2 {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff; }
+
+/* ==========================================================================
+ABOUT
+========================================================================== */
+#about {
+  height: auto;
+  padding: 200px 0;
+  background: #fff;
+  background-size: cover; }
+  #about .container {
+    height: 100%; }
+    #about .container .row {
+      display: flex;
+      height: 100%;
+      -ms-align-items: center;
+      align-items: center; }
+
+/* ABOUT Fonts
+   ========================================================================== */
+#about .section_title {
+  color: #222; }
+
+#about .section_paragraph {
+  font-weight: 500;
+  color: #757575; }
+
+/* ABOUT Images
+   ========================================================================== */
+#about .two img {
+  width: 100%;
+  height: auto; }
+
+/* ==========================================================================
+BLOG
+========================================================================== */
+#blog {
+  height: auto;
+  background: #ed1c24; }
+  #blog .row {
+    width: 100%;
+    height: 100%;
+    margin: 0; }
+    #blog .row .all {
+      display: flex;
+      height: inherit;
+      padding: 300px 100px;
+      -webkit-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      -ms-flex-align: center; }
+      #blog .row .all .group {
+        width: 60%; }
+    #blog .row .number2 {
+      background: #ee252d; }
+
+/* BLOG Fonts
+   ========================================================================== */
+#blog .blog_entry_title {
+  font-size: 1.8em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff; }
+
+#blog .blog_excerpt {
+  display: block;
+  font-weight: 600;
+  color: #fff; }
+
+#blog .blog_entry_title,
+#blog .blog_excerpt {
+  color: #fff; }
+
+/* BLOG Buttons
+   ========================================================================== */
+#blog a.blog_entry_read_more {
+  transition: all 300ms ease;
+  color: #fff;
+  border: 3px solid #fff;
+  background: transparent; }
+  #blog a.blog_entry_read_more:hover {
+    color: #ed1c24;
+    border: 5px solid #fff;
+    background: #fff; }
+
+/* ==========================================================================
+VIDEOS
+========================================================================== */
+#videos {
+  height: auto;
+  padding: 300px 0;
+  background: #fff; }
+  #videos .container {
+    height: 100%; }
+    #videos .container .row {
+      display: flex;
+      height: 100%;
+      -ms-align-items: center;
+      align-items: center; }
+      #videos .container .row .all {
+        height: auto; }
+        #videos .container .row .all .section_paragraph {
+          color: #757575; }
+        #videos .container .row .all .youtube_video {
+          width: 100%;
+          height: 300px; }
+
+/* VIDEOS Buttons
+   ========================================================================== */
+a.more_videos_btn {
+  color: #222;
+  border: 3px solid #222; }
+
+/* Large Devices, Wide Screens */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    /* ==========================================================================
+HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
+========================================================================== */
+  #about .section_title,
+  #videos .section_title {
+    font-size: 2em;
+    line-height: 31px;
+    text-transform: uppercase; }
+
+  #about .section_paragraph,
+  #blog .blog_excerpt,
+  #videos .section_paragraph {
+    line-height: 24px; }
+
+    /* ==========================================================================
+BLOG
+========================================================================== */
+  #blog .row .all {
+    padding: 100px 50px; }
+
+  #blog .row .all .group {
+    width: 100%; }
+
+ /* BLOG Fonts
+========================================================================== */
+  #blog .blog_entry_title {
+    font-size: 1.4em; } }
+/* Medium Devices, Desktops */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+    /* ==========================================================================
+JUMBOTRON
+========================================================================== */
+ /* JUMBOTRON Font Size
+========================================================================== */
+  #jumbotron h1 {
+    font-size: 2em; }
+
+    /* ==========================================================================
+ABOUT
+========================================================================== */
+  #about {
+    padding: 100px 0; }
+
+  #about .section_paragraph {
+    margin-bottom: 50px; }
+
+  #about .container .row {
+    display: block; }
+
+    /* ==========================================================================
+VIDEOS
+========================================================================== */
+  #videos {
+    padding: 100px 0; }
+
+  #videos .container .row {
+    display: block; }
+
+  #videos .container .row .one {
+    margin-bottom: 20px; } }
+/* Extra Small Devices, Phones */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/* Custom, iPhone Retina */
+
+/*# sourceMappingURL=style.css.map */

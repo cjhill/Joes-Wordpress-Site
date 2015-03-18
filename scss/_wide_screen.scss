@@ -1,0 +1,40 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    /* ==========================================================================
+HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
+========================================================================== */
+
+    #about .section_title,
+    #videos .section_title {
+        font-size: 2em;
+        line-height: 31px;
+
+        text-transform: uppercase;
+    }
+
+    #about .section_paragraph,
+    #blog .blog_excerpt,
+    #videos .section_paragraph {
+        line-height: 24px;
+    }
+
+    /* ==========================================================================
+BLOG
+========================================================================== */
+
+
+    #blog .row .all {
+        padding: 100px 50px;
+    }
+
+    #blog .row .all .group {
+        width: 100%;
+    }
+
+    /* BLOG Fonts
+   ========================================================================== */
+
+    #blog .blog_entry_title {
+        font-size: 1.4em;
+    }
+}

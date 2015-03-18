@@ -1,0 +1,34 @@
+<?php
+			$args = array(
+				'posts_per_page'   => 4,
+				'orderby'          => 'post_date'
+			);
+			$recent_posts = get_posts($args);
+			$count = 0;
+			foreach ($recent_posts as $post)  : 
+				setup_postdata($post);
+				$count++;
+				if($count <= 2) {
+					echo '<div class="col-xs-12 col-md-6 all both">';
+				} else {
+					echo '<div class="col-xs-12 col-md-6 all">';
+				}
+				
+			?>
+
+			
+					
+					<h1 class="blog_entry_title"><?php the_title(); ?></h1>
+
+					<br>
+
+					<!-- <span class="blog_excerpt"></span>	 -->
+					<?php the_excerpt(); ?>
+
+					<br><br>
+
+					<a href="<?php the_permalink(); ?>" class="blog_entry_read_more">Read More</a>
+
+				</div>
+
+			<?php endforeach; ?>
