@@ -12,31 +12,27 @@
 
 			if($aboutPage->have_posts()) : 
 				while($aboutPage->have_posts()) : $aboutPage->the_post(); ?>
+
+			<div class="col-xs-offset-4 col-xs-4 col-md-offset-5 col-md-2 all two">
+				
+					<img src="<?php bloginfo('template_url') ?>/img/joe/joe-dim-square.JPG" alt="">	
+
+			</div> 
 			
 
-			<div class="col-md-6 col-lg-5 all one">
+			
+
+		</div>
+
+		<div class="row">
+
+			<div class="all one">
 				
 				<h1 class="section_title"><?php the_title(); ?></h1>
 
-				<br><br>
-
 				<div class="section_paragraph"><?php the_content(); ?></div>
 
-				<br><br>
-
-				<ul class="hidden-sm">
-					<li><i class="fa fa-facebook-official"></i> <a href="">Facebook</a></li>
-					<li><i class="fa fa-envelope"></i> <a href="" title="">cjhill0216@gmail.com</a></li>
-					<li><i class="fa fa-phone-square"></i> <a href="">419-566-0238</a></li>
-				</ul>
-
 			</div>	
-
-			<div class="col-md-6 col-lg-6 col-lg-offset-1 all two">
-				
-					<img src="<?php bloginfo('template_url') ?>/img/joe/joe-dim.JPG" alt="">	
-
-			</div> 
 
 				<?php endwhile; ?>
 
@@ -46,7 +42,9 @@
 				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 			<?php endif; ?>
 
-			</div>
+			
+
+	
 
 		</div>
 		

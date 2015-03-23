@@ -1,16 +1,24 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
     /* ==========================================================================
-JUMBOTRON
+HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
 
+    #about .section_paragraph,
+    #blog .blog_excerpt,
+    #videos .section_paragraph {
+        padding: 8% 0;
+    }
+
+    /* ==========================================================================
+JUMBOTRON
+========================================================================== */
     #jumbotron {
         height: 30%;
     }
     /* JUMBOTRON Font Size
    ========================================================================== */
-
     #jumbotron  h1 {
-        font-size: 1.2em;
+        font-size: 2em;
     }
 }

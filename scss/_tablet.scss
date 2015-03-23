@@ -14,7 +14,7 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
     #about .section_paragraph,
     #blog .blog_excerpt,
     #videos .section_paragraph {
-        font-size: 1em;
+        padding: 0 8% 5% 8%;
 
         text-align: center;
     }
@@ -39,7 +39,7 @@ JUMBOTRON
    ========================================================================== */
 
     #jumbotron  h1 {
-        font-size: 2em;
+        font-size: 2.4em;
     }
 
     /* ==========================================================================
@@ -58,16 +58,31 @@ ABOUT
         display: block;
     }
 
+    #about .container .row .two {
+        margin: 1;
+    }
+
     /* ==========================================================================
 BLOG
 ========================================================================== */
+
+    #blog .container {
+        padding: 0;
+    }
+
+    #blog .container .row .all {
+        padding-top: 7%;
+        padding-bottom: 7%;
+
+        border-bottom: 1px dotted #ddd;
+    }
 
     #blog .row .all .group {
         text-align: center;
     }
 
     #blog .blog_excerpt {
-        width: 80%;
+        padding-bottom: 5%;
         margin: 0 auto;
     }
 

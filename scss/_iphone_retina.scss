@@ -1,6 +1,17 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
     /* ==========================================================================
+HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
+========================================================================== */
+
+    #about .section_title,
+    #videos .section_title,
+    #blog .blog_entry_title,
+    #more_blogs .section_title {
+        font-size: 1.8em;
+    }
+
+    /* ==========================================================================
 JUMBOTRON
 ========================================================================== */
 
@@ -11,6 +22,6 @@ JUMBOTRON
    ========================================================================== */
 
     #jumbotron  h1 {
-        font-size: 1em;
+        font-size: 1.3em;
     }
 }

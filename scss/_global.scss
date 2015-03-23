@@ -6,7 +6,7 @@ Variables
 $almostBlack: #222;
 $darkGray: #424242;
 $gray: #757575;
-$lightGray: #e2e2e2;
+$lightGray: #f2f2f2;
 $red: #fe0000;
 $lightRed: #f6c4c1;
 $white: #fff;
@@ -76,24 +76,32 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
 
 #about .section_title,
-#videos .section_title,
-#blog .blog_entry_title,
-#more_blogs .section_title {
-    font-size: 4em;
+#videos .section_title {
+    padding: 3% 0;
+
+    font-family: "jaf-bernino-sans-comp", "proxima-nova", sans-serif;
+    font-size: 3.1em;
     font-weight: 800;
     line-height: 60px;
 
-    letter-spacing: 6px;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
+
+#blog .blog_entry_title {
+    font-family: "jaf-bernino-sans-comp", "proxima-nova", sans-serif;
+    font-size: 1.7em;
+    font-weight: 400;
+}
+
 
 #about .section_paragraph,
 #blog .blog_excerpt,
 #videos .section_paragraph {
-    font-size: 1.6em;
-    line-height: 40px;
+    padding-bottom: 5%;
 
-    text-align: justify;
+    font-size: 1.4em;
+    line-height: 40px;
 }
 
 /* ==========================================================================
@@ -105,10 +113,12 @@ BUTTONS WITH THE SAME SETTINGS
     display: inline-block;
     padding: 15px 18px;
 
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 800;
 
     text-transform: uppercase;
+
+    border-radius: 3px;
 }
 
 /* ==========================================================================
@@ -207,7 +217,7 @@ NAV
 
 #slide_out_nav {
     position: fixed;
-    top: 60px;
+    top: 50px;
     right: 0;
     z-index: 1;
 
@@ -215,7 +225,7 @@ NAV
     height: 100%;
     padding-left: 150px;
 
-    background: $lightGray;
+    background: #000;
     ul {
         position: absolute;
         top: 30%;
@@ -225,7 +235,7 @@ NAV
                 font-size: 2em;
                 font-weight: 200;
 
-                color: #000;
+                color: #fff;
             }
         }
     }
@@ -240,7 +250,7 @@ JUMBOTRON
 ========================================================================== */
 
 .jumbotron {
-    height: 50%;
+    height: 60%;
     margin: 0;
 
     background: linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .3)), url(img/banner/banner.jpg);
@@ -265,7 +275,8 @@ JUMBOTRON
    ========================================================================== */
 
 #jumbotron  h1 {
-    font-size: 7em;
+    font-family: "jaf-bernino-sans-comp", "proxima-nova", sans-serif;
+    font-size: 6em;
 
     letter-spacing: 10px;
 }
@@ -285,7 +296,7 @@ ABOUT
 
 #about {
     height: auto;
-    padding: 400px 0;
+    padding: 7% 0;
 
     background: $white;
     background-size: cover;
@@ -300,20 +311,7 @@ ABOUT
             -ms-align-items: center;
                 align-items: center;
             .one {
-                .section_paragraph {
-                    padding-bottom: 10px;
-                }
-                li {
-                    line-height: 30px;
-
-                    color: $gray;
-                    .fa {
-                        margin-right: 10px;
-                    }
-                    a {
-                        color: $red;
-                    }
-                }
+                text-align: center;
             }
         }
     }
@@ -323,13 +321,15 @@ ABOUT
    ========================================================================== */
 
 #about .section_title {
-    color: $red;
+    color: $almostBlack;
 }
 
 #about .section_paragraph {
+    padding: 0 15%;
+
     font-weight: 500;
 
-    color: $gray;
+    color: #777;
 }
 
 /* ABOUT Images
@@ -338,7 +338,11 @@ ABOUT
 #about .two img {
     width: 100%;
     height: auto;
+    padding: 0 14%;
+
+    border-radius: 50%;
 }
+
 
 /* ==========================================================================
 BLOG
@@ -347,23 +351,23 @@ BLOG
 #blog {
     height: auto;
 
-    background: $red;
-    .row {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        .all {
-            display: flex;
-            height: inherit;
-            padding: 300px 0;
+    background: $lightGray;
+    .container {
+        padding: 6% 0;
+        .row {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            .all {
+                display: flex;
+                height: inherit;
+                padding: 20px 4%;
 
-            -webkit-align-items: center;
-                -ms-align-items: center;
-                    align-items: center;
-            -ms-flex-align: center;
-        }
-        .number2 {
-            background: lighten($red, 10%);
+                -webkit-align-items: center;
+                    -ms-align-items: center;
+                        align-items: center;
+                -ms-flex-align: center;
+            }
         }
     }
 }
@@ -372,21 +376,22 @@ BLOG
    ========================================================================== */
 
 #blog .blog_entry_title {
-    color: $white;
+    color: $red;
 }
 
 #blog .blog_excerpt {
     display: block;
 
-    font-weight: 600;
+    font-weight: 400;
 
-    color: $white;
+    color: #666;
 }
 
-#blog .blog_entry_title,
-#blog .blog_excerpt {
-    color: $white;
+#blog .blog_time {
+    font-style: italic;
 }
+
+
 
 /* BLOG Buttons
    ========================================================================== */
@@ -395,40 +400,14 @@ BLOG
     transition: all 300ms ease;
 
     color: $white;
-    border: 3px solid $white;
-    background: transparent;
+    border: none;
+    background: $red;
     &:hover {
         text-decoration: none;
 
         color: $red;
         border: 5px solid $white;
         background: $white;
-    }
-}
-
-/* ==========================================================================
-MORE BLOG
-========================================================================== */
-
-#more_blogs {
-    display: flex;
-    width: 100%;
-    height: 5%;
-
-    text-align: center;
-
-    background: $almostBlack;
-
-    -ms-align-items: center;
-        align-items: center;
-    .row {
-        width: 100%;
-        h1 {
-            color: $white;
-            a {
-                color: $red;
-            }
-        }
     }
 }
 
@@ -439,28 +418,20 @@ VIDEOS
 ========================================================================== */
 
 #videos {
-    height: auto;
-    padding: 200px 0;
+    height: 70%;
+    padding: 7% 0;
 
     background: $white;
     .container {
         height: 100%;
         .row {
-            display: flex;
             width: 100%;
             height: 100%;
             margin: 0 auto;
-
-            -ms-align-items: center;
-                align-items: center;
             .all {
-                height: auto;
+                height: 100%;
                 .section_paragraph {
                     color: $gray;
-                }
-                .youtube_video {
-                    width: 100%;
-                    height: 300px;
                 }
             }
         }
@@ -473,6 +444,13 @@ VIDEOS
 a.more_videos_btn {
     color: $almostBlack;
     border: 3px solid $almostBlack;
+}
+
+/* VIDEOS Youtube
+   ========================================================================== */
+.youtube-video {
+    width: 100%;
+    height: 100%;
 }
 
 /* ==========================================================================
@@ -496,7 +474,7 @@ NAVIGATE LINKS
 
         color: #838383;
         .fa {
-            font-size: 2em;
+            font-size: 1.4em;
         }
     }
 }

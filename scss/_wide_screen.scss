@@ -6,15 +6,60 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 
     #about .section_title,
     #videos .section_title {
-        /* font-size: 2.4em;*/
-        line-height: 35px;
+        padding: 5% 0;
 
-        text-transform: uppercase;
+        font-size: 2.4em;
+        line-height: 35px;
     }
 
+    #blog .blog_entry_title {
+    }
+
+    #blog .blog_excerpt {
+        font-size: 1.1em;
+        line-height: 34px;
+    }
+
+
     #about .section_paragraph,
-    #blog .blog_excerpt,
     #videos .section_paragraph {
+        font-size: 1.2em;
+        line-height: 34px;
+    }
+
+    /* ==========================================================================
+BUTTONS WITH THE SAME SETTINGS
+========================================================================== */
+
+    #blog a.blog_entry_read_more,
+    #videos a.more_videos_btn {
+        font-size: .9em;
+    }
+
+    /* ==========================================================================
+JUMBOTRON
+========================================================================== */
+
+    .jumbotron {
+        height: 40%;
+    }
+
+    /* JUMBOTRON Font Size
+   ========================================================================== */
+
+    #jumbotron  h1 {
+        font-size: 3em;
+    }
+
+    /* ==========================================================================
+ABOUT
+========================================================================== */
+
+    /* ABOUT Images
+   ========================================================================== */
+
+    #about .two img {
+        padding: 0;
     }
 
     /* ==========================================================================
@@ -23,19 +68,17 @@ BLOG
 
 
     #blog .row .all {
-        padding: 100px 0;
     }
 
     #blog .row .all .group {
         width: 100%;
     }
 
-    /* BLOG Fonts
-   ========================================================================== */
+    /* ==========================================================================
+VIDEOS
+========================================================================== */
 
-    #blog .blog_entry_title,
-    #more_blogs .row h1 {
-        font-size: 1.4em;
-        line-height: 28px;
+    #videos {
+        height: 50%;
     }
 }
