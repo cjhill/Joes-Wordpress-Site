@@ -109,12 +109,16 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
   font-size: 1.7em;
   font-weight: 400; }
 
+#blog .blog_excerpt {
+  padding-bottom: 5%;
+  font-size: 1.1em;
+  line-height: 28px; }
+
 #about .section_paragraph,
-#blog .blog_excerpt,
 #videos .section_paragraph {
   padding-bottom: 5%;
-  font-size: 1.4em;
-  line-height: 40px; }
+  font-size: 1.2em;
+  line-height: 36px; }
 
 /* ==========================================================================
 BUTTONS WITH THE SAME SETTINGS
