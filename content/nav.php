@@ -5,14 +5,14 @@
 		
 		<div class="row">
 			
-			<div class="col-md-6 all one">
+			<div class="col-xs-6 all one">
 				
 				<div class="group">
 					<img src="<?php echo get_bloginfo('template_directory') ?>/img/logo/ujp_logo.png" alt="">
 				</div> 
 	
 			</div>
-			<div class="col-md-6 all two">
+			<div class="col-xs-6 all two">
 				
 				<div class="group">
 					

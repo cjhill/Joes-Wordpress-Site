@@ -95,17 +95,21 @@ body {
 HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
 #about .section_title,
-#videos .section_title {
-  font-size: 3em;
+#videos .section_title,
+#blog .blog_entry_title,
+#more_blogs .section_title {
+  font-size: 4em;
   font-weight: 800;
-  line-height: 46px;
+  line-height: 60px;
+  letter-spacing: 6px;
   text-transform: uppercase; }
 
 #about .section_paragraph,
 #blog .blog_excerpt,
 #videos .section_paragraph {
-  font-size: 1em;
-  line-height: 26px; }
+  font-size: 1.6em;
+  line-height: 40px;
+  text-align: justify; }
 
 /* ==========================================================================
 BUTTONS WITH THE SAME SETTINGS
@@ -114,7 +118,7 @@ BUTTONS WITH THE SAME SETTINGS
 #videos a.more_videos_btn {
   display: inline-block;
   padding: 15px 18px;
-  font-size: .9em;
+  font-size: 1.5em;
   font-weight: 800;
   text-transform: uppercase; }
 
@@ -123,6 +127,7 @@ CONTAINER
 ========================================================================== */
 .container {
   width: 90%;
+  padding: 0;
   word-wrap: break-word; }
 
 /* ==========================================================================
@@ -132,7 +137,7 @@ NAV
   position: fixed;
   z-index: 2;
   width: 100%;
-  height: 65px;
+  height: 50px;
   background: transparent; }
   #nav .container {
     height: inherit; }
@@ -147,7 +152,7 @@ NAV
         -ms-flex-align: center; }
       #nav .container .row .one .group {
         height: inherit;
-        padding: 20px; }
+        padding: 15px; }
         #nav .container .row .one .group img {
           width: auto;
           height: 100%; }
@@ -175,7 +180,7 @@ NAV
 ========================================================================== */
 .menu_btn {
   display: block;
-  color: #ed1c24; }
+  color: #fe0000; }
   .menu_btn .fa {
     font-size: 2em; }
 
@@ -186,7 +191,7 @@ NAV
   top: 60px;
   right: 0;
   z-index: 1;
-  width: 30%;
+  width: 20%;
   height: 100%;
   padding-left: 150px;
   background: #e2e2e2; }
@@ -225,7 +230,7 @@ JUMBOTRON
 /* JUMBOTRON Font Size
    ========================================================================== */
 #jumbotron h1 {
-  font-size: 4em;
+  font-size: 7em;
   letter-spacing: 10px; }
 
 #jumbotron h1,
@@ -239,21 +244,32 @@ ABOUT
 ========================================================================== */
 #about {
   height: auto;
-  padding: 200px 0;
+  padding: 400px 0;
   background: #fff;
   background-size: cover; }
   #about .container {
     height: 100%; }
     #about .container .row {
       display: flex;
+      width: 100%;
       height: 100%;
+      margin: 0 auto;
       -ms-align-items: center;
       align-items: center; }
+      #about .container .row .one .section_paragraph {
+        padding-bottom: 10px; }
+      #about .container .row .one li {
+        line-height: 30px;
+        color: #757575; }
+        #about .container .row .one li .fa {
+          margin-right: 10px; }
+        #about .container .row .one li a {
+          color: #fe0000; }
 
 /* ABOUT Fonts
    ========================================================================== */
 #about .section_title {
-  color: #222; }
+  color: #fe0000; }
 
 #about .section_paragraph {
   font-weight: 500;
@@ -270,7 +286,7 @@ BLOG
 ========================================================================== */
 #blog {
   height: auto;
-  background: #ed1c24; }
+  background: #fe0000; }
   #blog .row {
     width: 100%;
     height: 100%;
@@ -278,22 +294,17 @@ BLOG
     #blog .row .all {
       display: flex;
       height: inherit;
-      padding: 300px 100px;
+      padding: 300px 0;
       -webkit-align-items: center;
       -ms-align-items: center;
       align-items: center;
       -ms-flex-align: center; }
-      #blog .row .all .group {
-        width: 60%; }
     #blog .row .number2 {
-      background: #ee252d; }
+      background: #ff3232; }
 
 /* BLOG Fonts
    ========================================================================== */
 #blog .blog_entry_title {
-  font-size: 1.8em;
-  font-weight: 800;
-  text-transform: uppercase;
   color: #fff; }
 
 #blog .blog_excerpt {
@@ -313,22 +324,43 @@ BLOG
   border: 3px solid #fff;
   background: transparent; }
   #blog a.blog_entry_read_more:hover {
-    color: #ed1c24;
+    text-decoration: none;
+    color: #fe0000;
     border: 5px solid #fff;
     background: #fff; }
+
+/* ==========================================================================
+MORE BLOG
+========================================================================== */
+#more_blogs {
+  display: flex;
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  background: #222;
+  -ms-align-items: center;
+  align-items: center; }
+  #more_blogs .row {
+    width: 100%; }
+    #more_blogs .row h1 {
+      color: #fff; }
+      #more_blogs .row h1 a {
+        color: #fe0000; }
 
 /* ==========================================================================
 VIDEOS
 ========================================================================== */
 #videos {
   height: auto;
-  padding: 300px 0;
+  padding: 200px 0;
   background: #fff; }
   #videos .container {
     height: 100%; }
     #videos .container .row {
       display: flex;
+      width: 100%;
       height: 100%;
+      margin: 0 auto;
       -ms-align-items: center;
       align-items: center; }
       #videos .container .row .all {
@@ -345,6 +377,62 @@ a.more_videos_btn {
   color: #222;
   border: 3px solid #222; }
 
+/* ==========================================================================
+NAVIGATE LINKS
+========================================================================== */
+.to_the_top {
+  position: fixed;
+  right: 0;
+  bottom: 20%;
+  padding: .7em;
+  background: rgba(255, 255, 255, 0.5); }
+  .to_the_top a {
+    font-size: .8em;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #838383; }
+    .to_the_top a .fa {
+      font-size: 2em; }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1900px) {
+    /* ==========================================================================
+HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
+========================================================================== */
+  #about .section_title,
+  #videos .section_title,
+  #blog .blog_entry_title,
+  #more_blogs .section_title {
+    font-size: 2.4em;
+    line-height: 46px; }
+
+  #about .section_paragraph,
+  #blog .blog_excerpt,
+  #videos .section_paragraph {
+    font-size: 1.2em;
+    line-height: 29px; }
+
+    /* ==========================================================================
+BUTTONS WITH THE SAME SETTINGS
+========================================================================== */
+  #blog a.blog_entry_read_more,
+  #videos a.more_videos_btn {
+    font-size: .9em; }
+
+    /* ==========================================================================
+JUMBOTRON
+========================================================================== */
+ /* JUMBOTRON Font Size
+========================================================================== */
+  #jumbotron h1 {
+    font-size: 4em; }
+
+    /* ==========================================================================
+ABOUT
+========================================================================== */
+  #about {
+    padding: 200px 0; } }
 /* Large Devices, Wide Screens */
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -353,36 +441,57 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
   #about .section_title,
   #videos .section_title {
-    font-size: 2em;
-    line-height: 31px;
+    /* font-size: 2.4em;*/
+    line-height: 35px;
     text-transform: uppercase; }
-
-  #about .section_paragraph,
-  #blog .blog_excerpt,
-  #videos .section_paragraph {
-    line-height: 24px; }
 
     /* ==========================================================================
 BLOG
 ========================================================================== */
   #blog .row .all {
-    padding: 100px 50px; }
+    padding: 100px 0; }
 
   #blog .row .all .group {
     width: 100%; }
 
  /* BLOG Fonts
 ========================================================================== */
-  #blog .blog_entry_title {
-    font-size: 1.4em; } }
+  #blog .blog_entry_title,
+  #more_blogs .row h1 {
+    font-size: 1.4em;
+    line-height: 28px; } }
 /* Medium Devices, Desktops */
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
     /* ==========================================================================
+HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
+========================================================================== */
+  #about .section_title,
+  #videos .section_title,
+  #blog .blog_entry_title,
+  #more_blogs .section_title {
+    text-align: center; }
+
+  #about .section_paragraph,
+  #blog .blog_excerpt,
+  #videos .section_paragraph {
+    font-size: 1em;
+    text-align: center; }
+
+    /* ==========================================================================
+CONTAINER
+========================================================================== */
+  .container {
+    width: 98%; }
+
+    /* ==========================================================================
 JUMBOTRON
 ========================================================================== */
+  #jumbotron {
+    height: 40%; }
+
  /* JUMBOTRON Font Size
 ========================================================================== */
   #jumbotron h1 {
@@ -394,11 +503,21 @@ ABOUT
   #about {
     padding: 100px 0; }
 
-  #about .section_paragraph {
+  #about .container .row .one ul {
     margin-bottom: 50px; }
 
   #about .container .row {
     display: block; }
+
+    /* ==========================================================================
+BLOG
+========================================================================== */
+  #blog .row .all .group {
+    text-align: center; }
+
+  #blog .blog_excerpt {
+    width: 80%;
+    margin: 0 auto; }
 
     /* ==========================================================================
 VIDEOS
@@ -410,10 +529,35 @@ VIDEOS
     display: block; }
 
   #videos .container .row .one {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+
+  #videos .container .row .two {
+    text-align: center; } }
 /* Extra Small Devices, Phones */
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    /* ==========================================================================
+JUMBOTRON
+========================================================================== */
+  #jumbotron {
+    height: 30%; }
+
+ /* JUMBOTRON Font Size
+========================================================================== */
+  #jumbotron h1 {
+    font-size: 1.2em; } }
 /* Custom, iPhone Retina */
 /* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+    /* ==========================================================================
+JUMBOTRON
+========================================================================== */
+  #jumbotron {
+    height: 20%; }
+
+ /* JUMBOTRON Font Size
+========================================================================== */
+  #jumbotron h1 {
+    font-size: 1em; } }
 
 /*# sourceMappingURL=style.css.map */

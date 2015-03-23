@@ -1,8 +1,39 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
     /* ==========================================================================
+HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
+========================================================================== */
+
+    #about .section_title,
+    #videos .section_title,
+    #blog .blog_entry_title,
+    #more_blogs .section_title {
+        text-align: center;
+    }
+
+    #about .section_paragraph,
+    #blog .blog_excerpt,
+    #videos .section_paragraph {
+        font-size: 1em;
+
+        text-align: center;
+    }
+
+    /* ==========================================================================
+CONTAINER
+========================================================================== */
+
+    .container {
+        width: 98%;
+    }
+
+    /* ==========================================================================
 JUMBOTRON
 ========================================================================== */
+
+    #jumbotron {
+        height: 40%;
+    }
 
     /* JUMBOTRON Font Size
    ========================================================================== */
@@ -19,12 +50,25 @@ ABOUT
         padding: 100px 0;
     }
 
-    #about .section_paragraph {
+    #about .container .row .one ul {
         margin-bottom: 50px;
     }
 
     #about .container .row {
         display: block;
+    }
+
+    /* ==========================================================================
+BLOG
+========================================================================== */
+
+    #blog .row .all .group {
+        text-align: center;
+    }
+
+    #blog .blog_excerpt {
+        width: 80%;
+        margin: 0 auto;
     }
 
     /* ==========================================================================
@@ -41,5 +85,9 @@ VIDEOS
 
     #videos .container .row .one {
         margin-bottom: 20px;
+    }
+
+    #videos .container .row .two {
+        text-align: center;
     }
 }

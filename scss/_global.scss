@@ -7,7 +7,7 @@ $almostBlack: #222;
 $darkGray: #424242;
 $gray: #757575;
 $lightGray: #e2e2e2;
-$red: #ed1c24;
+$red: #fe0000;
 $lightRed: #f6c4c1;
 $white: #fff;
 
@@ -76,19 +76,24 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
 
 #about .section_title,
-#videos .section_title {
-    font-size: 3em;
+#videos .section_title,
+#blog .blog_entry_title,
+#more_blogs .section_title {
+    font-size: 4em;
     font-weight: 800;
-    line-height: 46px;
+    line-height: 60px;
 
+    letter-spacing: 6px;
     text-transform: uppercase;
 }
 
 #about .section_paragraph,
 #blog .blog_excerpt,
 #videos .section_paragraph {
-    font-size: 1em;
-    line-height: 26px;
+    font-size: 1.6em;
+    line-height: 40px;
+
+    text-align: justify;
 }
 
 /* ==========================================================================
@@ -100,7 +105,7 @@ BUTTONS WITH THE SAME SETTINGS
     display: inline-block;
     padding: 15px 18px;
 
-    font-size: .9em;
+    font-size: 1.5em;
     font-weight: 800;
 
     text-transform: uppercase;
@@ -112,6 +117,7 @@ CONTAINER
 
 .container {
     width: 90%;
+    padding: 0;
 
     word-wrap: break-word;
 }
@@ -125,7 +131,7 @@ NAV
     z-index: 2;
 
     width: 100%;
-    height: 65px;
+    height: 50px;
 
     background: transparent;
     .container {
@@ -144,7 +150,7 @@ NAV
             .one {
                 .group {
                     height: inherit;
-                    padding: 20px;
+                    padding: 15px;
                     img {
                         width: auto;
                         height: 100%;
@@ -195,6 +201,7 @@ NAV
     }
 }
 
+
 /* NAV Menu Slide Out Nav
 ========================================================================== */
 
@@ -204,7 +211,7 @@ NAV
     right: 0;
     z-index: 1;
 
-    width: 30%;
+    width: 20%;
     height: 100%;
     padding-left: 150px;
 
@@ -258,7 +265,7 @@ JUMBOTRON
    ========================================================================== */
 
 #jumbotron  h1 {
-    font-size: 4em;
+    font-size: 7em;
 
     letter-spacing: 10px;
 }
@@ -278,7 +285,7 @@ ABOUT
 
 #about {
     height: auto;
-    padding: 200px 0;
+    padding: 400px 0;
 
     background: $white;
     background-size: cover;
@@ -286,10 +293,28 @@ ABOUT
         height: 100%;
         .row {
             display: flex;
+            width: 100%;
             height: 100%;
+            margin: 0 auto;
 
             -ms-align-items: center;
                 align-items: center;
+            .one {
+                .section_paragraph {
+                    padding-bottom: 10px;
+                }
+                li {
+                    line-height: 30px;
+
+                    color: $gray;
+                    .fa {
+                        margin-right: 10px;
+                    }
+                    a {
+                        color: $red;
+                    }
+                }
+            }
         }
     }
 }
@@ -298,7 +323,7 @@ ABOUT
    ========================================================================== */
 
 #about .section_title {
-    color: $almostBlack;
+    color: $red;
 }
 
 #about .section_paragraph {
@@ -330,18 +355,15 @@ BLOG
         .all {
             display: flex;
             height: inherit;
-            padding: 300px 100px;
+            padding: 300px 0;
 
             -webkit-align-items: center;
                 -ms-align-items: center;
                     align-items: center;
             -ms-flex-align: center;
-            .group {
-                width: 60%;
-            }
         }
         .number2 {
-            background: lighten($red, 2%);
+            background: lighten($red, 10%);
         }
     }
 }
@@ -350,11 +372,6 @@ BLOG
    ========================================================================== */
 
 #blog .blog_entry_title {
-    font-size: 1.8em;
-    font-weight: 800;
-
-    text-transform: uppercase;
-
     color: $white;
 }
 
@@ -381,6 +398,8 @@ BLOG
     border: 3px solid $white;
     background: transparent;
     &:hover {
+        text-decoration: none;
+
         color: $red;
         border: 5px solid $white;
         background: $white;
@@ -388,19 +407,49 @@ BLOG
 }
 
 /* ==========================================================================
+MORE BLOG
+========================================================================== */
+
+#more_blogs {
+    display: flex;
+    width: 100%;
+    height: 5%;
+
+    text-align: center;
+
+    background: $almostBlack;
+
+    -ms-align-items: center;
+        align-items: center;
+    .row {
+        width: 100%;
+        h1 {
+            color: $white;
+            a {
+                color: $red;
+            }
+        }
+    }
+}
+
+
+
+/* ==========================================================================
 VIDEOS
 ========================================================================== */
 
 #videos {
     height: auto;
-    padding: 300px 0;
+    padding: 200px 0;
 
     background: $white;
     .container {
         height: 100%;
         .row {
             display: flex;
+            width: 100%;
             height: 100%;
+            margin: 0 auto;
 
             -ms-align-items: center;
                 align-items: center;
@@ -424,4 +473,30 @@ VIDEOS
 a.more_videos_btn {
     color: $almostBlack;
     border: 3px solid $almostBlack;
+}
+
+/* ==========================================================================
+NAVIGATE LINKS
+========================================================================== */
+
+.to_the_top {
+    position: fixed;
+    right: 0;
+    bottom: 20%;
+
+    padding: .7em;
+
+    background: rgba(255,255,255,.5);
+    a {
+        font-size: .8em;
+        font-weight: 800;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: #838383;
+        .fa {
+            font-size: 2em;
+        }
+    }
 }

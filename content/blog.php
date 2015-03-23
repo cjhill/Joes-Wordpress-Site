@@ -14,6 +14,7 @@
 			$count++;
 				echo '<div class="col-xs-12 col-md-6 all number' . $count . '">';
 				?>
+				<div class="container">
 					<div class="group">
 						<h1 class="blog_entry_title"><?php the_title(); ?></h1>
 						<br>
@@ -22,6 +23,7 @@
 						<br><br>
 						<a href="<?php the_permalink(); ?>" class="blog_entry_read_more">Read More</a>
 					</div>
+				</div>
 				</div>
 			<?php endforeach; ?>
 		</div>
