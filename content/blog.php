@@ -1,7 +1,9 @@
 <section id="blog">
 	<div class="container">
 
-		<!-- <h1>Recent Blogs</h1> -->
+		<h1 class="section_title">Recent Blogs</h1>
+
+		<br>
 		
 		<div class="row">
 			
@@ -25,9 +27,9 @@
 				
 					<div class="blog_time"><?php the_time('F j, Y'); ?></div> 
 					<span class="blog_excerpt"><?php the_excerpt(); ?></span>
-		
-					<a href="<?php the_permalink(); ?>" class="blog_entry_read_more">Read More</a>
 				</div>
+					<a href="<?php the_permalink(); ?>" class="blog_entry_read_more">Read More</a>
+				
 				
 			</div>
 			<?php endforeach; ?>

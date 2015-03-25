@@ -16,9 +16,9 @@
 			
 			
 
-			<div class="col-sm-5  all one">
+			<div class="col-md-5  all one">
 				
-				<h1 class="section_title"><?php the_title(); ?></h1>
+				<h1 class="section_title">Joe Bridenbaugh</h1>
 
 				<br>
 
@@ -28,18 +28,18 @@
 
 				<div id="contact-info">
 					<ul>
-						<li>419-566-0238</li>
-						<li><a href="#">Email</a></li>
-						<li><a href="#">Facebook</a></li>
-						<li><a href="#">Twitter</a></li>
+						<li><a href="tel:14195658431">4195658431</a></li>
+						<li><a href="mailto:jbride@willard-oh.com">Email</a></li>
+						<li><a href="https://www.facebook.com/joe.bridenbaugh.7">Facebook</a></li>
+						
 					</ul>
 				</div>
 
 			</div>
 
-			<div class="col-sm-6 col-sm-offset-1 all two">
+			<div class="col-md-6 col-md-offset-1 all two">
 				
-					<img src="<?php bloginfo('template_url') ?>/img/joe/joe-dim.JPG" alt=""> 	
+					<img src="<?php bloginfo('template_url') ?>/img/joe/joe-dim.png" alt=""> 	
 
 			</div> 	
 

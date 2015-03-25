@@ -1,11 +1,18 @@
-<div id="comments">
-	
-	<?php wp_list_comments(); ?>
+<?php if (have_comments()): ?>
+	<h4><?php comments_number('No Comments', 'One Comment', '% Comments'); ?></h4>
+	<ul class="comment-list">
+		<?php wp_list_comments('callback=custom_comments'); ?>
+	</ul>
+<?php endif; ?>
 
-</div>
 
-<div id="comment-form">
-	
-	<?php comment_form(); ?>
+<?php 
+	$comments_args = array(
+		'label_submit' => 'Submit Comment',
+		'title_reply' => 'Post a Comment',
+		'comment_notes_after' => ''
+		);
+	comment_form($comments_args);
+?>
 
-</div>
+

@@ -1,31 +1,36 @@
 jQuery(document).ready(function($) {
-	
-	// Make navigation appear anywhere in the page
-	var navOffset = $("nav").offset().top;
 
-	$(window).scroll(function(){
+    // Make navigation appear anywhere in the page
 
-		var scrollPos = $(window).scrollTop();
-		var aboutOffset = $("#about").offset().top;
+    $(window).scroll(function() {
 
-		if(scrollPos >= aboutOffset - 80) {
-			$("nav").fadeIn("slow", function() {
-			    $(this).addClass("addColor");
-			});
-		} else {
-			$("nav").removeClass("addColor");
-		}
+        var scrollPos = $(window).scrollTop();
 
-	});
+        if (scrollPos >= 130) {
+
+            $("nav").addClass("addColor");
+            $("nav").removeClass("navigation");
 
 
-	// Make the nav slider slide
-	var navButton = $('.menu_btn');
-	var slideNavBox = $('#slide_out_nav');
+        } else {
+        	$("nav").addClass("navigation");
+            $("nav").removeClass("addColor");
 
-	navButton.click(function(){
-		slideNavBox.toggleClass('hide_nav');
-	});
+        }
 
-	
+    });
+
+
+    // Make the nav slider slide
+    var navButton = $('.two .group');
+    var slideNavBox = $('#slide_out_nav');
+
+    navButton.click(function() {
+        slideNavBox.toggleClass('hide_nav');
+    });
+
+
 });
+
+
+// $(".to_the_top").css("visibility", "visible");

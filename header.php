@@ -11,4 +11,4 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<?php //include 'content/nav.php'; ?>
+		<?php include 'content/nav.php'; ?>

@@ -1,5 +1,5 @@
 <!-- Top Navigatgion -->
-<nav id="nav">
+<nav id="nav" class="navigation">
 	
 	<div class="container">
 		
@@ -16,7 +16,10 @@
 				
 				<div class="group">
 					
-					<span class="menu_btn"><i class="fa fa-bars"></i></span>
+					<div class="small-line"></div>
+					<div class="small-line"></div>
+					<div class="small-line"></div>
+
 
 				</div>
 	

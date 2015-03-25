@@ -4,11 +4,9 @@
 HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
 
-    #about .section_title,
-    #videos .section_title {
-        padding: 5% 0;
-
-        line-height: 35px;
+    .section_title {
+        font-size: 2.6em;
+        line-height: 43px;
     }
 
     #blog .blog_entry_title {
@@ -33,7 +31,6 @@ BUTTONS WITH THE SAME SETTINGS
 
     #blog a.blog_entry_read_more,
     #videos a.more_videos_btn {
-        font-size: .8em;
     }
 
     /* ==========================================================================
@@ -50,7 +47,7 @@ CONTAINER
 JUMBOTRON
 ========================================================================== */
 
-    .jumbotron {
+    #jumbotron {
         height: 70%;
     }
 
@@ -87,8 +84,4 @@ BLOG
     /* ==========================================================================
 VIDEOS
 ========================================================================== */
-
-    #videos {
-        height: 50%;
-    }
 }

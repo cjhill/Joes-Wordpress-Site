@@ -13,32 +13,114 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 /* Reset*/
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  padding: 0;
   margin: 0;
-  padding: 0; }
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 body {
   line-height: 1; }
 
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: none; }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+  border-collapse: collapse; }
 
 /* Global*/
 /*==========================================================================
@@ -95,34 +177,32 @@ body {
 /* ==========================================================================
 HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
-#about .section_title,
-#videos .section_title {
+.section_title {
     /*padding: 3% 0;
 */
-  font-size: 2.8em;
+  font-size: 3em;
   font-weight: 800;
-  line-height: 60px;
+  line-height: 48px;
   letter-spacing: 2px;
   text-transform: uppercase; }
 
-#blog .blog_entry_title {
+#blog .blog_entry_title,
+#blog-list .blog_entry_title {
   font-size: 1.2em;
   font-weight: 800;
   text-transform: uppercase; }
 
 #blog .blog_excerpt {
-  padding-bottom: 5%;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 500;
   line-height: 28px; }
 
-#about .section_paragraph,
-#videos .section_paragraph {
+.section_paragraph {
   padding-bottom: 5%;
   font-size: 1.1em;
   font-weight: 500;
   line-height: 30px;
-  text-align: justify; }
+  /* text-align: justify;*/ }
 
 /* ==========================================================================
 BUTTONS WITH THE SAME SETTINGS
@@ -133,8 +213,17 @@ BUTTONS WITH THE SAME SETTINGS
   padding: 16px 0;
   font-size: .8em;
   font-weight: 800;
+  text-decoration: none;
   text-transform: uppercase;
   border-radius: 3px; }
+
+#videos a.more_videos_btn {
+  padding-right: 16px;
+  padding-left: 16px;
+  transition: all 300ms ease; }
+  #videos a.more_videos_btn:hover {
+    color: #fff;
+    background: #757575; }
 
 /* ==========================================================================
 CONTAINER
@@ -149,11 +238,9 @@ CONTAINER
 NAV
 ========================================================================== */
 #nav {
-  position: fixed;
   z-index: 2;
   width: 100%;
-  height: 50px;
-  background: transparent; }
+  height: 130px; }
   #nav .container {
     height: inherit; }
     #nav .container .row {
@@ -166,8 +253,7 @@ NAV
         align-items: center;
         -ms-flex-align: center; }
       #nav .container .row .one .group {
-        height: inherit;
-        padding: 15px; }
+        height: 30%; }
         #nav .container .row .one .group img {
           width: auto;
           height: 100%; }
@@ -188,37 +274,68 @@ NAV
             text-transform: uppercase;
             color: #fff; }
 
-.addColor {
-  background: #222 !important; }
+.navigation {
+  position: absolute; }
 
+.addColor {
+  position: fixed;
+  -webkit-animation: menu-animation .5s forwards ease-in-out;
+  -o-animation: menu-animation .5s forwards ease-in-out;
+  animation: menu-animation .5s forwards ease-in-out;
+  background: #1c1c1e !important; }
+
+@-webkit-keyframes menu-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes menu-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes menu-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes menu-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 /* NAV Menu Toggle Button
 ========================================================================== */
-.menu_btn {
-  display: block;
-  color: #fe0000; }
-  .menu_btn .fa {
-    font-size: 2em; }
+.small-line {
+  width: 30px;
+  height: 4px;
+  margin-bottom: 6px;
+  background: #fff; }
 
 /* NAV Menu Slide Out Nav
 ========================================================================== */
 #slide_out_nav {
   position: fixed;
-  top: 50px;
+  top: 0;
   right: 0;
   z-index: 1;
-  width: 20%;
+  width: 30%;
   height: 100%;
   padding-left: 150px;
-  background: #000; }
+  background: #1c1c1e; }
   #slide_out_nav ul {
     position: absolute;
-    top: 30%; }
+    top: 30%;
+    list-style: none; }
     #slide_out_nav ul li {
       height: 80px; }
       #slide_out_nav ul li a {
         font-size: 2em;
         font-weight: 200;
+        text-decoration: none;
         color: #fff; }
+        #slide_out_nav ul li a:hover {
+          color: #fe0000; }
 
 .hide_nav {
   display: none; }
@@ -226,33 +343,35 @@ NAV
 /* ==========================================================================
 JUMBOTRON
 ========================================================================== */
-.jumbotron {
+.jumbotron .container {
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -ms-flex-align: center; }
+
+#jumbotron {
   height: 70%;
   margin: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/banner/banner.jpg);
+  background-position: -400px -200px;
     /*background-attachment: fixed;
 */
-  background-size: cover; }
-  .jumbotron .container {
-    display: flex;
-    height: 100%;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    -ms-flex-align: center; }
-    .jumbotron .container .group {
-      width: 100%;
-      text-align: center; }
+  background-size: 150%; }
+  #jumbotron .container .group {
+    width: 100%;
+    text-align: center; }
 
 /* JUMBOTRON Font Size
    ========================================================================== */
-#jumbotron h1 {
+.jumbotron h1 {
   font-family: "jaf-bernino-sans-comp", "proxima-nova", sans-serif;
-  font-size: 6em;
-  letter-spacing: 10px; }
+  font-size: 3em;
+  letter-spacing: 8px; }
 
-#jumbotron h1,
-#jumbotron h2 {
+.jumbotron h1,
+.jumbotron h2 {
   font-weight: 900;
   text-transform: uppercase;
   color: #fff; }
@@ -262,7 +381,7 @@ ABOUT
 ========================================================================== */
 #about {
   height: auto;
-  padding: 7% 0;
+  padding: 12% 0;
   background: #fff;
   background-size: cover; }
   #about .container {
@@ -275,7 +394,7 @@ ABOUT
 /* ABOUT Fonts
    ========================================================================== */
 #about .section_title {
-  color: #222; }
+  color: #1c1c1e; }
 
 #about .section_paragraph {
   color: #777; }
@@ -289,44 +408,45 @@ ABOUT
 /* ABOUT Contact
    ========================================================================== */
 #contact-info {
-  width: 40%;
-  padding: 6%;
+  width: 50%;
+  padding: 6% 0;
+  border-radius: 5px;
   background: #f2f2f2; }
-  #contact-info li {
-    font-weight: 600;
-    line-height: 28px;
-    color: #777; }
-    #contact-info li a {
+  #contact-info ul {
+    padding-left: 28px; }
+    #contact-info ul li {
       font-weight: 600;
-      color: #00a9c5; }
+      line-height: 28px;
+      list-style: none;
+      color: #777; }
+      #contact-info ul li a {
+        font-weight: 600;
+        color: #00a9c5; }
 
 /* ==========================================================================
 BLOG
 ========================================================================== */
 #blog {
-  height: auto;
-    /*background: $lightGray;
-*/ }
+  padding: 12% 0;
+  background: #f1f1f1; }
   #blog .container {
-    padding: 7% 0;
-    border-top: 2px solid #f1f1f1;
-    border-bottom: 2px solid #f1f1f1; }
+    height: 100%; }
+    #blog .container h1 {
+      margin-bottom: 20px; }
     #blog .container .row {
       width: 100%;
       height: 100%;
       margin: 0; }
       #blog .container .row .all {
-        display: flex;
-        height: inherit;
-        padding: 20px 4%;
-        -webkit-align-items: center;
-        -ms-align-items: center;
-        align-items: center;
-        -ms-flex-align: center; }
+        height: 300px;
+        padding: 0 4%; }
+        #blog .container .row .all .group {
+          height: 65%; }
 
 /* BLOG Fonts
    ========================================================================== */
 #blog .blog_entry_title {
+  letter-spacing: 1px;
   color: #fe0000; }
 
 #blog .blog_excerpt {
@@ -334,8 +454,8 @@ BLOG
   color: #888; }
 
 #blog .blog_time {
-  font-size: .7em;
-  color: #888; }
+  font-size: 1em;
+  color: #999; }
 
 /* BLOG Buttons
    ========================================================================== */
@@ -346,16 +466,14 @@ BLOG
   background: transparent; }
   #blog a.blog_entry_read_more:hover {
     text-decoration: none;
-    color: #fe0000;
-    border: 5px solid #fff;
-    background: #fff; }
+    color: #fe0000; }
 
 /* ==========================================================================
 VIDEOS
 ========================================================================== */
 #videos {
-  height: 70%;
-  padding: 7% 0;
+  height: auto;
+  padding: 12% 0;
   background: #fff; }
   #videos .container {
     height: 100%; }
@@ -376,7 +494,19 @@ a.more_videos_btn {
 
 /* VIDEOS Youtube
    ========================================================================== */
-.youtube-video {
+.video-container {
+  position: relative;
+  height: 0;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  overflow: hidden; }
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%; }
 
@@ -390,7 +520,7 @@ NAVIGATE LINKS
   padding: .7em;
   background: rgba(255, 255, 255, 0.5); }
   .to_the_top a {
-    font-size: .8em;
+    font-size: 1em;
     font-weight: 800;
     text-decoration: none;
     text-transform: uppercase;
@@ -398,16 +528,33 @@ NAVIGATE LINKS
     .to_the_top a .fa {
       font-size: 1.4em; }
 
+/* ==========================================================================
+SINGLE
+========================================================================== */
+#single-jumbotron {
+  height: 40%;
+  margin-bottom: 0;
+  background: #fe0000;
+  background-size: cover; }
+  #single-jumbotron .container .group {
+    width: 100%;
+    text-align: center; }
+
+#single-blog {
+  padding: 7% 0;
+  background: #f2f2f2; }
+  #single-blog .section_title {
+    color: #fe0000; }
+
 /* Large Devices, Wide Screens */
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
     /* ==========================================================================
 HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
-  #about .section_title,
-  #videos .section_title {
-    padding: 5% 0;
-    line-height: 35px; }
+  .section_title {
+    font-size: 2.6em;
+    line-height: 43px; }
 
   #blog .blog_excerpt {
     font-size: 1.1em;
@@ -421,10 +568,6 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
     /* ==========================================================================
 BUTTONS WITH THE SAME SETTINGS
 ========================================================================== */
-  #blog a.blog_entry_read_more,
-  #videos a.more_videos_btn {
-    font-size: .8em; }
-
     /* ==========================================================================
 CONTAINER
 ========================================================================== */
@@ -435,7 +578,7 @@ CONTAINER
     /* ==========================================================================
 JUMBOTRON
 ========================================================================== */
-  .jumbotron {
+  #jumbotron {
     height: 70%; }
 
  /* JUMBOTRON Font Size
@@ -459,11 +602,43 @@ BLOG
 
     /* ==========================================================================
 VIDEOS
+========================================================================== */ }
+/* Medium Devices, Desktops */
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    /* ==========================================================================
+HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
-  #videos {
-    height: 50%; } }
-/* Medium Devices, Desktops */
-/* Medium Devices, Desktops */
+  .section_title {
+    font-size: 2em;
+    line-height: 33px; }
+
+    /* ==========================================================================
+ABOUT
+========================================================================== */
+  #contact-info {
+    margin-bottom: 30px; }
+
+ /* ABOUT Contact
+========================================================================== */
+  #contact-info {
+    width: 100%;
+    padding: 6%; }
+
+    /* ==========================================================================
+BLOG
+========================================================================== */
+  #blog {
+    height: 470px; }
+
+  #blog .container .row .all {
+    padding: 20px 2%; }
+
+    /* ==========================================================================
+VIDEOS
+========================================================================== */
+  .video-container {
+    margin-bottom: 30px; } }
 /* Small Devices, Tablets */
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -558,10 +733,8 @@ JUMBOTRON
     /* ==========================================================================
 HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
-  #about .section_title,
-  #videos .section_title,
-  #blog .blog_entry_title,
-  #more_blogs .section_title {
+  .section_title,
+  #blog .blog_entry_title {
     font-size: 1.8em; }
 
     /* ==========================================================================
