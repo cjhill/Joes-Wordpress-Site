@@ -7,10 +7,8 @@
 		<!-- SHIV CDN -->
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	
-		<!-- Typekit Fonts -->
-		<script src="//use.typekit.net/mfh8qox.js"></script>
-		<script>try{Typekit.load();}catch(e){}</script>
+		
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<?php include 'content/nav.php'; ?>
+		<?php //include 'content/nav.php'; ?>

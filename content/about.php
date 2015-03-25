@@ -13,26 +13,35 @@
 			if($aboutPage->have_posts()) : 
 				while($aboutPage->have_posts()) : $aboutPage->the_post(); ?>
 
-			<div class="col-xs-offset-4 col-xs-4 col-md-offset-5 col-md-2 all two">
-				
-					<img src="<?php bloginfo('template_url') ?>/img/joe/joe-dim-square.JPG" alt="">	
-
-			</div> 
+			
 			
 
-			
-
-		</div>
-
-		<div class="row">
-
-			<div class="all one">
+			<div class="col-sm-5  all one">
 				
 				<h1 class="section_title"><?php the_title(); ?></h1>
 
+				<br>
+
 				<div class="section_paragraph"><?php the_content(); ?></div>
 
-			</div>	
+				<br>
+
+				<div id="contact-info">
+					<ul>
+						<li>419-566-0238</li>
+						<li><a href="#">Email</a></li>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="col-sm-6 col-sm-offset-1 all two">
+				
+					<img src="<?php bloginfo('template_url') ?>/img/joe/joe-dim.JPG" alt=""> 	
+
+			</div> 	
 
 				<?php endwhile; ?>
 
@@ -46,8 +55,8 @@
 
 	
 
+
 		</div>
-		
 
 	</div>
 </section>

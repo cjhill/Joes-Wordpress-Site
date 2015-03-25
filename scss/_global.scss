@@ -68,7 +68,8 @@ html,
 body {
     height: 100%;
 
-    font-family: "proxima-nova",sans-serif;
+    font-family: "Neue Haas Grotesk W01";
+    font-family: "Neue Haas Grotesk W01 Disp";
 }
 
 /* ==========================================================================
@@ -77,10 +78,9 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 
 #about .section_title,
 #videos .section_title {
-    padding: 3% 0;
-
-    font-family: "jaf-bernino-sans-comp", "proxima-nova", sans-serif;
-    font-size: 3.1em;
+    /*padding: 3% 0;
+*/
+    font-size: 2.8em;
     font-weight: 800;
     line-height: 60px;
 
@@ -89,15 +89,17 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 }
 
 #blog .blog_entry_title {
-    font-family: "jaf-bernino-sans-comp", "proxima-nova", sans-serif;
-    font-size: 1.7em;
-    font-weight: 400;
+    font-size: 1.2em;
+    font-weight: 800;
+
+    text-transform: uppercase;
 }
 
 #blog .blog_excerpt {
     padding-bottom: 5%;
 
     font-size: 1.1em;
+    font-weight: 500;
     line-height: 28px;
 }
 
@@ -106,8 +108,11 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 #videos .section_paragraph {
     padding-bottom: 5%;
 
-    font-size: 1.2em;
-    line-height: 36px;
+    font-size: 1.1em;
+    font-weight: 500;
+    line-height: 30px;
+
+    text-align: justify;
 }
 
 /* ==========================================================================
@@ -117,9 +122,9 @@ BUTTONS WITH THE SAME SETTINGS
 #blog a.blog_entry_read_more,
 #videos a.more_videos_btn {
     display: inline-block;
-    padding: 15px 18px;
+    padding: 16px 0;
 
-    font-size: 1em;
+    font-size: .8em;
     font-weight: 800;
 
     text-transform: uppercase;
@@ -133,6 +138,7 @@ CONTAINER
 
 .container {
     width: 90%;
+    max-width: 1170px;
     padding: 0;
 
     word-wrap: break-word;
@@ -256,10 +262,12 @@ JUMBOTRON
 ========================================================================== */
 
 .jumbotron {
-    height: 60%;
+    height: 70%;
     margin: 0;
 
     background: linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .3)), url(img/banner/banner.jpg);
+    /*background-attachment: fixed;
+*/
     background-size: cover;
     .container {
         display: flex;
@@ -309,16 +317,9 @@ ABOUT
     .container {
         height: 100%;
         .row {
-            display: flex;
             width: 100%;
             height: 100%;
             margin: 0 auto;
-
-            -ms-align-items: center;
-                align-items: center;
-            .one {
-                text-align: center;
-            }
         }
     }
 }
@@ -331,10 +332,6 @@ ABOUT
 }
 
 #about .section_paragraph {
-    padding: 0 15%;
-
-    font-weight: 500;
-
     color: #777;
 }
 
@@ -344,9 +341,26 @@ ABOUT
 #about .two img {
     width: 100%;
     height: auto;
-    padding: 0 14%;
+}
 
-    border-radius: 50%;
+/* ABOUT Contact
+   ========================================================================== */
+#contact-info {
+    width: 40%;
+    padding: 6%;
+
+    background: $lightGray;
+    li {
+        font-weight: 600;
+        line-height: 28px;
+
+        color: #777;
+        a {
+            font-weight: 600;
+
+            color: #00a9c5;
+        }
+    }
 }
 
 
@@ -356,10 +370,13 @@ BLOG
 
 #blog {
     height: auto;
-
-    background: $lightGray;
+    /*background: $lightGray;
+*/
     .container {
-        padding: 6% 0;
+        padding: 7% 0;
+
+        border-top: 2px solid #f1f1f1;
+        border-bottom: 2px solid #f1f1f1;
         .row {
             width: 100%;
             height: 100%;
@@ -388,13 +405,13 @@ BLOG
 #blog .blog_excerpt {
     display: block;
 
-    font-weight: 400;
-
-    color: #666;
+    color: #888;
 }
 
 #blog .blog_time {
-    font-style: italic;
+    font-size: .7em;
+
+    color: #888;
 }
 
 
@@ -405,9 +422,9 @@ BLOG
 #blog a.blog_entry_read_more {
     transition: all 300ms ease;
 
-    color: $white;
+    color: $gray;
     border: none;
-    background: $red;
+    background: transparent;
     &:hover {
         text-decoration: none;
 
@@ -448,8 +465,8 @@ VIDEOS
    ========================================================================== */
 
 a.more_videos_btn {
-    color: $almostBlack;
-    border: 3px solid $almostBlack;
+    color: #777;
+    border: 3px solid #777;
 }
 
 /* VIDEOS Youtube

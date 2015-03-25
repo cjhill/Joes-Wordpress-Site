@@ -89,36 +89,40 @@ Mixins and Extends
 html,
 body {
   height: 100%;
-  font-family: "proxima-nova",sans-serif; }
+  font-family: "Neue Haas Grotesk W01";
+  font-family: "Neue Haas Grotesk W01 Disp"; }
 
 /* ==========================================================================
 HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
 #about .section_title,
 #videos .section_title {
-  padding: 3% 0;
-  font-family: "jaf-bernino-sans-comp", "proxima-nova", sans-serif;
-  font-size: 3.1em;
+    /*padding: 3% 0;
+*/
+  font-size: 2.8em;
   font-weight: 800;
   line-height: 60px;
   letter-spacing: 2px;
   text-transform: uppercase; }
 
 #blog .blog_entry_title {
-  font-family: "jaf-bernino-sans-comp", "proxima-nova", sans-serif;
-  font-size: 1.7em;
-  font-weight: 400; }
+  font-size: 1.2em;
+  font-weight: 800;
+  text-transform: uppercase; }
 
 #blog .blog_excerpt {
   padding-bottom: 5%;
   font-size: 1.1em;
+  font-weight: 500;
   line-height: 28px; }
 
 #about .section_paragraph,
 #videos .section_paragraph {
   padding-bottom: 5%;
-  font-size: 1.2em;
-  line-height: 36px; }
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: justify; }
 
 /* ==========================================================================
 BUTTONS WITH THE SAME SETTINGS
@@ -126,8 +130,8 @@ BUTTONS WITH THE SAME SETTINGS
 #blog a.blog_entry_read_more,
 #videos a.more_videos_btn {
   display: inline-block;
-  padding: 15px 18px;
-  font-size: 1em;
+  padding: 16px 0;
+  font-size: .8em;
   font-weight: 800;
   text-transform: uppercase;
   border-radius: 3px; }
@@ -137,6 +141,7 @@ CONTAINER
 ========================================================================== */
 .container {
   width: 90%;
+  max-width: 1170px;
   padding: 0;
   word-wrap: break-word; }
 
@@ -222,9 +227,11 @@ NAV
 JUMBOTRON
 ========================================================================== */
 .jumbotron {
-  height: 60%;
+  height: 70%;
   margin: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/banner/banner.jpg);
+    /*background-attachment: fixed;
+*/
   background-size: cover; }
   .jumbotron .container {
     display: flex;
@@ -261,14 +268,9 @@ ABOUT
   #about .container {
     height: 100%; }
     #about .container .row {
-      display: flex;
       width: 100%;
       height: 100%;
-      margin: 0 auto;
-      -ms-align-items: center;
-      align-items: center; }
-      #about .container .row .one {
-        text-align: center; }
+      margin: 0 auto; }
 
 /* ABOUT Fonts
    ========================================================================== */
@@ -276,26 +278,39 @@ ABOUT
   color: #222; }
 
 #about .section_paragraph {
-  padding: 0 15%;
-  font-weight: 500;
   color: #777; }
 
 /* ABOUT Images
    ========================================================================== */
 #about .two img {
   width: 100%;
-  height: auto;
-  padding: 0 14%;
-  border-radius: 50%; }
+  height: auto; }
+
+/* ABOUT Contact
+   ========================================================================== */
+#contact-info {
+  width: 40%;
+  padding: 6%;
+  background: #f2f2f2; }
+  #contact-info li {
+    font-weight: 600;
+    line-height: 28px;
+    color: #777; }
+    #contact-info li a {
+      font-weight: 600;
+      color: #00a9c5; }
 
 /* ==========================================================================
 BLOG
 ========================================================================== */
 #blog {
   height: auto;
-  background: #f2f2f2; }
+    /*background: $lightGray;
+*/ }
   #blog .container {
-    padding: 6% 0; }
+    padding: 7% 0;
+    border-top: 2px solid #f1f1f1;
+    border-bottom: 2px solid #f1f1f1; }
     #blog .container .row {
       width: 100%;
       height: 100%;
@@ -316,19 +331,19 @@ BLOG
 
 #blog .blog_excerpt {
   display: block;
-  font-weight: 400;
-  color: #666; }
+  color: #888; }
 
 #blog .blog_time {
-  font-style: italic; }
+  font-size: .7em;
+  color: #888; }
 
 /* BLOG Buttons
    ========================================================================== */
 #blog a.blog_entry_read_more {
   transition: all 300ms ease;
-  color: #fff;
+  color: #757575;
   border: none;
-  background: #fe0000; }
+  background: transparent; }
   #blog a.blog_entry_read_more:hover {
     text-decoration: none;
     color: #fe0000;
@@ -356,8 +371,8 @@ VIDEOS
 /* VIDEOS Buttons
    ========================================================================== */
 a.more_videos_btn {
-  color: #222;
-  border: 3px solid #222; }
+  color: #777;
+  border: 3px solid #777; }
 
 /* VIDEOS Youtube
    ========================================================================== */
@@ -392,7 +407,6 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
   #about .section_title,
   #videos .section_title {
     padding: 5% 0;
-    font-size: 2.4em;
     line-height: 35px; }
 
   #blog .blog_excerpt {
@@ -401,7 +415,7 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 
   #about .section_paragraph,
   #videos .section_paragraph {
-    font-size: 1.2em;
+    max-width: 100%;
     line-height: 34px; }
 
     /* ==========================================================================
@@ -409,13 +423,20 @@ BUTTONS WITH THE SAME SETTINGS
 ========================================================================== */
   #blog a.blog_entry_read_more,
   #videos a.more_videos_btn {
-    font-size: .9em; }
+    font-size: .8em; }
+
+    /* ==========================================================================
+CONTAINER
+========================================================================== */
+  .container {
+    padding: 0;
+    word-wrap: break-word; }
 
     /* ==========================================================================
 JUMBOTRON
 ========================================================================== */
   .jumbotron {
-    height: 40%; }
+    height: 70%; }
 
  /* JUMBOTRON Font Size
 ========================================================================== */
@@ -449,24 +470,9 @@ VIDEOS
     /* ==========================================================================
 HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 ========================================================================== */
-  #about .section_title,
-  #videos .section_title,
-  #blog .blog_entry_title,
-  #more_blogs .section_title {
-    text-align: center; }
-
-  #about .section_paragraph,
-  #blog .blog_excerpt,
-  #videos .section_paragraph {
-    padding: 0 8% 5% 8%;
-    text-align: center; }
-
     /* ==========================================================================
 CONTAINER
 ========================================================================== */
-  .container {
-    width: 98%; }
-
     /* ==========================================================================
 JUMBOTRON
 ========================================================================== */

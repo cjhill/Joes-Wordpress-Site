@@ -8,7 +8,6 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
     #videos .section_title {
         padding: 5% 0;
 
-        font-size: 2.4em;
         line-height: 35px;
     }
 
@@ -23,7 +22,8 @@ HEADERS AND PARAGRAPHS WITH THE SAME SETTINGS
 
     #about .section_paragraph,
     #videos .section_paragraph {
-        font-size: 1.2em;
+        max-width: 100%;
+
         line-height: 34px;
     }
 
@@ -33,7 +33,17 @@ BUTTONS WITH THE SAME SETTINGS
 
     #blog a.blog_entry_read_more,
     #videos a.more_videos_btn {
-        font-size: .9em;
+        font-size: .8em;
+    }
+
+    /* ==========================================================================
+CONTAINER
+========================================================================== */
+
+    .container {
+        padding: 0;
+
+        word-wrap: break-word;
     }
 
     /* ==========================================================================
@@ -41,7 +51,7 @@ JUMBOTRON
 ========================================================================== */
 
     .jumbotron {
-        height: 40%;
+        height: 70%;
     }
 
     /* JUMBOTRON Font Size

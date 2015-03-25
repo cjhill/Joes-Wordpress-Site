@@ -15,13 +15,15 @@
 			foreach ($recent_posts as $post)  :
 				setup_postdata($post);
 				$count++;
-					echo '<div class="col-xs-12 col-md-4 all number' . $count . '">';
+					echo '<div class="col-xs-12 col-sm-4 all number' . $count . '">';
 				?>
 				
 				<div class="group">
 					<h1 class="blog_entry_title"><?php the_title(); ?></h1>
+
 					<br>
-					<div class="blog_time"><?php the_time('F j, Y'); ?></div>
+				
+					<div class="blog_time"><?php the_time('F j, Y'); ?></div> 
 					<span class="blog_excerpt"><?php the_excerpt(); ?></span>
 		
 					<a href="<?php the_permalink(); ?>" class="blog_entry_read_more">Read More</a>
